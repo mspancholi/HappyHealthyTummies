@@ -1,0 +1,31 @@
+.img-comp {
+    margin-bottom: 20px;
+    height: 500px;
+    width: 800px;
+    object-fit: contain;
+    color: white;
+    opacity: .5
+}
+
+.top-div .overlay-text {
+    margin-left: 10px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.top-div .bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(/images/healthy-foods-veggies.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: .4;
+}
+

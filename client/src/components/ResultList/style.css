@@ -1,0 +1,32 @@
+.results-card {
+    margin-top: 20px;
+}
+
+.results-tab {
+    margin-top: 20px;
+}
+
+.results-title {
+    background-color: rgb(196, 193, 193);
+    padding: 10px;
+}
+
+.favBtn {
+    height: 35px;
+    width: 45px;
+    text-align: center;
+}
+
+.mapBtn {
+    background-image: url("./logo-google-maps-2015.png");
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.ReactTable {
+    background-color: white;
+}
