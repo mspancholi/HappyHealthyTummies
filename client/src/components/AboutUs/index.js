@@ -16,7 +16,7 @@ function AboutUs(props) {
                         <div className="overlay-text">
                             <Row>
                                 <Col size="md-12" >
-                                    <h1>What we do</h1>
+                                    <h1>What We Do</h1>
                                 </Col>
                             </Row>
                             <Row>
