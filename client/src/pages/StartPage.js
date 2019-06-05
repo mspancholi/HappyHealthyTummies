@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom'
+import { Redirect } from "react-router-dom"
 import Nav from "../components/Nav";
 import AboutUs from "../components/AboutUs";
 import { Row, Container } from "../components/Grid";
@@ -58,7 +58,7 @@ class StartPage extends Component {
             <Container fluid>
                 {this.renderRedirect()}
                 <Row>
-                    <Nav onLogin={this.onFacebookLogin}></Nav>
+                    <Nav></Nav>
                 </Row>
                 <Row>
                     <AboutUs onLogin={this.onFacebookLogin} onClick={this.handleEnterSiteClick} disabled={!(this.state.loggedIn)} image={"/images/healthy-foods-veggies.jpg"} title={"Heathly Food"} ></AboutUs>

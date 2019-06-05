@@ -9,10 +9,10 @@ function Nav(props) {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link className="navbar-brand text-center" to="/" >
         <img className="healthy-meal-img" src="/images/healthy-meal.jpg" alt="healthy-meal" />
-        Happy Healthy Tummies 
+        <span className="navTitle">Happy Healthy Tummies</span>
       </Link>
     </nav>
-    
-  );
+  )
 }
+
 export default Nav;

@@ -12,6 +12,9 @@
     position: relative;
     z-index: 1;
     text-align: center;
+    border-style: double;
+    font-weight: bold;
+    font-size: 13pt;
 }
 
 .top-div .bg {
@@ -26,6 +29,16 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 1000px;
     opacity: .4;
+}
+
+#clickInstructions {
+    font-style: italic;
+}
+
+.beginBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 

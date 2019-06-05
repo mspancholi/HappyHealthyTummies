@@ -5,14 +5,17 @@
 
 .bg-primary {
   width:100%;
-  text-align: left;
+  text-align: center;
   display: inline-block;
   margin-bottom: 20px;
 }
-
 
 .healthy-meal-img {
   margin: 20px;
   width: 100px;
   object-fit: contain;
+}
+
+.navTitle {
+  margin-left: 200px;
 }

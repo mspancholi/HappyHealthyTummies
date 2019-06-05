@@ -92,6 +92,12 @@ class SearchForm extends Component {
                         <Form.Group controlId="formFood">
                             <Form.Label>Name of Food</Form.Label>
                             <Form.Control type="text" list="foods" placeholder="Name of Food" value={this.state.food} onChange={this.handleChangeFood}/>
+                            <datalist id="foods">
+                                <option>Pizza</option>
+                                <option>Burger</option>
+                                <option>Taco</option>
+                                <option>Sushi</option>
+                            </datalist>
                         </Form.Group>
                         <Button variant="primary" type="submit" disabled={this.props.buttonsDisabled}>
                             Submit

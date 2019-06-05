@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom"
 import Nav from "../components/Nav";
 import nutrAPI from "../utils/nutrAPI";
 import { Col, Row, Container } from "../components/Grid";
@@ -10,7 +11,6 @@ import dbAPI from "../utils/dbAPI";
 class Nutrition extends Component {
 
     state = {
-        sidebarOpen: false,
         userName: null,
         userID: null,
         buttonsDisabled: false,
@@ -22,14 +22,20 @@ class Nutrition extends Component {
         myLng: 0,
         activeTab: "results",
         results: [],
-        favs: []
+        favs: [],
+        redirect: false
     }
 
     constructor(props) {
         console.log("Nutrition: constructor");
         super(props);
-        this.state.userName = this.props.location.state.userName;
-        this.state.userID = this.props.location.state.userID;
+        if (this.props.location.state) {
+            this.state.userName = this.props.location.state.userName;
+            this.state.userID = this.props.location.state.userID;
+        }
+        else {
+            this.state.redirect  = true;
+        }
     }
 
 
@@ -177,12 +183,22 @@ class Nutrition extends Component {
         });
     }
 
+    renderRedirect = () => {
+        console.log("Nutrition: renderRedirect");
+        if (this.state.redirect) {
+            console.log("calling redirect");
+            return <Redirect to={{
+                pathname: "/"
+            }} ></Redirect>
+        }
+    }
+
     render() {
         return (
             <Container fluid>
+                {this.renderRedirect()}
                 <Row>
-                    <Nav onLogin={this.onFacebookLogin}></Nav>
-                    
+                    <Nav></Nav>
                 </Row>
                 <Row>
                     <Col size="md-5">

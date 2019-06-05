@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
-import ReactDrawer from 'react-drawer';
+//import ReactDOM from 'react-dom';
+//import ReactDrawer from 'react-drawer';
+import Collapsible from 'react-collapsible';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -96,10 +97,10 @@ class PreferenceForm extends Component {
                     let userData = {
                         userID: this.props.userID,
                         userName: this.props.userName,
-                        calories: res.data.calories,
-                        protein: res.data.protein,
-                        carbs: res.data.carbs,
-                        sugars: res.data.sugars
+                        calories: 1000,
+                        protein: 10,
+                        carbs: 50,
+                        sugars: 30
                     };
                     dbAPI.createUser(userData)
                         .then(res => {
@@ -179,7 +180,9 @@ class PreferenceForm extends Component {
     render() {
         return (
             <Card className="preference-card" >
-                <Card.Title className="preference-title" >Preference</Card.Title>
+                <Card.Title className="preference-title" >
+                    Preference
+                </Card.Title>
                 <Card.Body>
                     <Form className="preference-form" onSubmit={event => this.handleButtonClick(event)}>
                         <Form.Group as={Row} controlId="formCalories">
